@@ -7,3 +7,7 @@ Test Hasura
 ```bash
   hasura metadata apply --envfile .env
 ```
+
+## Deploy
+
+[Link Deploy](https://fajar-hasura.hasura.app/v1/graphql)

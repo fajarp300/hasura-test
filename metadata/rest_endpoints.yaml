@@ -6,3 +6,4 @@
     query:
       collection_name: rest_queries
       query_name: GetPost5Page
+  role: public
