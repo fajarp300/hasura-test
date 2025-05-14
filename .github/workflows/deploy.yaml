@@ -18,10 +18,12 @@ jobs:
           chmod +x hasura
           sudo mv hasura /usr/local/bin/
 
-      - name: Export Env
+      - name: Export Env Variables
         run: |
           echo "HASURA_GRAPHQL_ENDPOINT=${{ secrets.HASURA_GRAPHQL_ENDPOINT }}" >> $GITHUB_ENV
           echo "HASURA_GRAPHQL_ADMIN_SECRET=${{ secrets.HASURA_GRAPHQL_ADMIN_SECRET }}" >> $GITHUB_ENV
+          echo "DB_URL=${{ secrets.DB_URL }}" >> $GITHUB_ENV
+          echo "HASURA_ACTION_WEBHOOK=${{ secrets.HASURA_ACTION_WEBHOOK }}" >> $GITHUB_ENV
 
       - name: Apply migrations
         run: hasura migrate apply --endpoint "$HASURA_GRAPHQL_ENDPOINT" --admin-secret "$HASURA_GRAPHQL_ADMIN_SECRET"
