@@ -25,8 +25,11 @@ jobs:
           echo "DB_URL=${{ secrets.DB_URL }}" >> $GITHUB_ENV
           echo "HASURA_ACTION_WEBHOOK=${{ secrets.HASURA_ACTION_WEBHOOK }}" >> $GITHUB_ENV
 
+      - name: Verify metadata
+        run: hasura metadata verify --endpoint "$HASURA_GRAPHQL_ENDPOINT" --admin-secret "$HASURA_GRAPHQL_ADMIN_SECRET"
+
       - name: Apply migrations
-        run: hasura migrate apply --endpoint "$HASURA_GRAPHQL_ENDPOINT" --admin-secret "$HASURA_GRAPHQL_ADMIN_SECRET"
+        run: hasura migrate apply --endpoint "$HASURA_GRAPHQL_ENDPOINT" --admin-secret "$HASURA_GRAPHQL_ADMIN_SECRET" --database-name pg-035
 
       - name: Apply metadata
         run: hasura metadata apply --endpoint "$HASURA_GRAPHQL_ENDPOINT" --admin-secret "$HASURA_GRAPHQL_ADMIN_SECRET"
