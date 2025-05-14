@@ -1,1 +1,8 @@
-[]
+- name: getPost5Page
+  url: get-post-5-page
+  methods:
+    - GET
+  definition:
+    query:
+      collection_name: rest_queries
+      query_name: GetPost5Page

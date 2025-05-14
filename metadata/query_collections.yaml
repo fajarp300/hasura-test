@@ -1,1 +1,13 @@
-[]
+- name: rest_queries
+  definition:
+    queries:
+      - name: GetPost5Page
+        query: |
+          query GetPost5Page {
+            posts(limit: 5, order_by: { created_at: desc }) {
+              id
+              title
+              content
+              created_at
+            }
+          }

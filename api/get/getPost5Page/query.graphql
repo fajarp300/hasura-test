@@ -1,0 +1,8 @@
+query GetPost5Page {
+  posts(limit: 5, order_by: { created_at: desc }) {
+    id
+    title
+    content
+    created_at
+  }
+}
