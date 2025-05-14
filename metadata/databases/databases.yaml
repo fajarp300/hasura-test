@@ -2,7 +2,7 @@
   kind: postgres
   configuration:
     connection_info:
-      database_url: "{{DB_URL}}"
+      database_url: '{{DB_URL}}'
       isolation_level: read-committed
       use_prepared_statements: false
   tables: "!include pg-035/tables/tables.yaml"

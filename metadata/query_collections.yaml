@@ -1,10 +1,30 @@
+- name: allowed-queries
+  definition:
+    queries:
+      - name: GetPost10Page
+        query: |
+          query MyQuery ($limit: Int = 10, $offset: Int = 10) {
+            posts(limit: $limit, offset: $offset) {
+              id
+              title
+              content
+              user {
+                name
+                email
+              }
+              category {
+                name
+              }
+              created_at
+            }
+          }
 - name: rest_queries
   definition:
     queries:
       - name: GetPost5Page
         query: |
           query GetPost5Page {
-            posts(limit: 5, order_by: { created_at: desc }) {
+            posts(limit: 5, order_by: {created_at:desc}) {
               id
               title
               content
