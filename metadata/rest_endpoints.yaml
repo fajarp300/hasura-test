@@ -7,12 +7,12 @@
     - GET
   name: GetPost10Page
   url: get-post-10-page
-- comment: null
-  definition:
-    query:
-      collection_name: rest_queries
-      query_name: GetPost5Page
-  methods:
-    - GET
-  name: getPost5Page
-  url: get-post-5-page
+# - comment: null
+#   definition:
+#     query:
+#       collection_name: rest_queries
+#       query_name: GetPost5Page
+#   methods:
+#     - GET
+#   name: getPost5Page
+#   url: get-post-5-page
