@@ -1,18 +1,19 @@
 - comment: ""
   definition:
     query:
-      collection_name: allowed-queries
-      query_name: GetPost10Page
+      collection_name: getPostDynamicParamLimitOffset
+      query_name: getPostDynamicParamLimitOffset
   methods:
     - GET
-  name: GetPost10Page
-  url: get-post-10-page
-# - comment: null
-#   definition:
-#     query:
-#       collection_name: rest_queries
-#       query_name: GetPost5Page
-#   methods:
-#     - GET
-#   name: getPost5Page
-#   url: get-post-5-page
+  name: getPostDynamicParamLimitOffset
+  url: get-post-dynamic-params
+
+- comment: ""
+  definition:
+    query:
+      collection_name: GetPost5Page
+      query_name: GetPost5Page
+  methods:
+    - GET
+  name: getPost5Page
+  url: get-post-5-page

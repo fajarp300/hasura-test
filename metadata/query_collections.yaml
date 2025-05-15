@@ -1,24 +1,25 @@
-- name: allowed-queries
+- name: getPostDynamicParamLimitOffset
   definition:
     queries:
-      - name: GetPost10Page
+      - name: getPostDynamicParamLimitOffset
         query: |
-          query MyQuery ($limit: Int = 10, $offset: Int = 10) {
+          query getPostDynamicParamLimitOffset($limit: Int = 10, $offset: Int = 10) {
             posts(limit: $limit, offset: $offset) {
-              id
-              title
-              content
-              user {
-                name
-                email
-              }
-              category {
-                name
-              }
-              created_at
+            id
+            title
+            content
+            user {
+              name
+              email
+            }
+            category {
+              name
+            }
+            created_at
             }
           }
-- name: rest_queries
+
+- name: GetPost5Page
   definition:
     queries:
       - name: GetPost5Page

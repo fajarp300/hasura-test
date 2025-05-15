@@ -1,0 +1,15 @@
+query getPostDynamicParamLimitOffset($limit: Int = 10, $offset: Int = 10) {
+  posts(limit: $limit, offset: $offset) {
+    id
+    title
+    content
+    user {
+      name
+      email
+    }
+    category {
+      name
+    }
+    created_at
+  }
+}
